@@ -44,6 +44,11 @@
       mods = <(MOD_LGUI|MOD_RGUI)>;
       keep-mods = <(MOD_LGUI|MOD_RGUI)>;
     };
+    lt: layer_tap {
+      tapping-term-ms = <200>;
+      quick_tap_ms = <200>;
+      flavor = "tap-preferred";
+    };
   };
   keymap {
     compatible = "zmk,keymap";
@@ -51,7 +56,7 @@
         label = "Default";
         bindings = <
             &kp Q         &kp W         &lt MEDIA E         &kp R      &kp T                &kp Y          &kp U               &kp I           &kp O         &kp P
-            &hm LSHIFT A  &hm SYM S     &hm LC(LS(LALT)) D  &hm NAV F     &hm LC(LG(LALT)) G   &kp H          &hm LC(LS(LALT)) J  &hm NUM K       &hm SYM L     &hm RSHIFT SQT
+            &hm LSHIFT A  &lt sYM S     &hm LC(LS(LALT)) D  &lt NAV F     &hm LC(LG(LALT)) G   &kp H          &hm LC(LS(LALT)) J  &lt NUM K       &lt SYM L     &hm RSHIFT SQT
             &kp Z         &kp X         &kp C               &lt NAV2 V    &kp B                &kp N          &kp M               &kp COMMA       &kp DOT       &kp QMARK
                                         &grave_esc    &hm LALT TAB  &hm LCMD SPACE       &hm RCMD BSPC  &hm RALT ENTER      &hm RCTRL DEL
         >;
