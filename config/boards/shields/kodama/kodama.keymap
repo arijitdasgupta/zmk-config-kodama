@@ -34,7 +34,7 @@
       #binding-cells = <2>;
       tapping-term-ms = <200>; // produces tap if held longer than tapping-term-ms
       quick_tap_ms = <0>;    // if double tapped, long-tabs the key instead of hold
-      flavor = "balanced";
+      flavor = "tap-preferred"; // docs: https://zmk.dev/docs/keymaps/behaviors/hold-tap
       bindings = <&kp>, <&kp>;
     };
     grave_esc: grave_escape {
