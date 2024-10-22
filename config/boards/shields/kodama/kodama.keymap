@@ -32,9 +32,9 @@
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS";
       #binding-cells = <2>;
-      tapping-term-ms = <150>; // produces tap if held longer than tapping-term-ms
-      quick_tap_ms = <150>;    // if double tapped, long-tabs the key instead of hold
-      flavor = "balanced";
+      tapping-term-ms = <200>; // produces tap if held longer than tapping-term-ms
+      quick_tap_ms = <200>;    // if double tapped, long-tabs the key instead of hold
+      flavor = "tap-preferred"; // docs: https://zmk.dev/docs/keymaps/behaviors/hold-tap
       bindings = <&kp>, <&kp>;
     };
     grave_esc: grave_escape {
@@ -43,6 +43,11 @@
       bindings = <&hm LCTRL ESC>, <&kp GRAVE>;
       mods = <(MOD_LGUI|MOD_RGUI)>;
       keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+    };
+    lt: layer_tap {
+      tapping-term-ms = <200>;
+      quick_tap_ms = <200>;
+      flavor = "tap-preferred";
     };
   };
   keymap {
